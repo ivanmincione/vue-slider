@@ -19,9 +19,9 @@ var app = new Vue (
             nextImg() {
                 // incremento fino a raggiungere l'indice massimo
                 this.indexImg ++ ;
+                this.resetPlay();
                 if( this.indexImg > this.images.length - 1 ) {
                     this.indexImg = 0;
-                    this.resetPlay();
                 }
             },
 
@@ -42,7 +42,7 @@ var app = new Vue (
 
             // ------------------------- TEST ---------------------
 
-// l'autoplay si avvia solo dopo aver cliccato su un circle o dopo aver scorso tutte le immagini .... ??? ....
+// l'autoplay si avvia solo dopo aver cliccato su un circle o su una freccia .... ??? ....
 
             play() {
                 let element = this;
@@ -53,6 +53,10 @@ var app = new Vue (
 
             resetPlay() {
                 clearInterval(this.timer);
+                this.play();
+            },
+
+            created() {
                 this.play();
             },
 
