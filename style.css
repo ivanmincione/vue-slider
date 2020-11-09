@@ -33,4 +33,29 @@
     width: calc(100% - 100px);
     height: 100%;
     float: left;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.circles {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.circles i {
+    color: white;
+    margin: 0 10px;
+
+}
+
+.circles i.active{
+    font-weight: bold;
 }

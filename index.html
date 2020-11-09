@@ -18,14 +18,25 @@
             <div class="container">
 
                 <div class="prev">
+                    <!-- onClick richiamo la funzione -->
                     <i @click="prevImg" class="fas fa-angle-double-left fa-2x"></i>
                 </div>
 
                 <div class="carousel">
                     <img :src="images[indexImg]" alt="Image Not Found">
+                    <div class="circles">
+                        <!-- scorro l'array delle immagini e quando l'indice dell'img è uguale a quello del circle aggiungo la classe active  -->
+                        <i
+                            class="far fa-circle"
+                            v-for="(img, index) in images"
+                            :class= "index == indexImg ? 'active' : '' ">
+                        </i>
+
+                    </div>
                 </div>
 
                 <div class="next">
+                    <!-- onClick richiamo la funzione -->
                     <i @click="nextImg" class="fas fa-angle-double-right fa-2x"></i>
                 </div>
 
