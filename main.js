@@ -35,7 +35,7 @@ var app = new Vue (
             },
 
             // click sui circles e cambio di immagine corrispondente
-            selectSlide: function(index) {
+            selectSlide(index) {
                 this.indexImg = index;
                 this.resetPlay();
             },
@@ -56,12 +56,12 @@ var app = new Vue (
                 this.play();
             },
 
-            created() {
-                this.play();
-            },
 
 
 //end methods
+        },
+        created() {
+            this.play();
         },
 
 //end Vue
