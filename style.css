@@ -16,7 +16,6 @@
 .container{
     width: 1000px;
     height: 600px;
-    background-color: lightblue;
 }
 
 .prev, .next {
@@ -26,7 +25,10 @@
     justify-content: center;
     align-items: center;
     float: left;
-    background-color: red;
+}
+
+.prev i, .next i {
+    cursor: pointer;
 }
 
 .carousel{
@@ -40,7 +42,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
 
 .circles {
@@ -53,6 +55,7 @@
 .circles i {
     color: white;
     margin: 0 10px;
+    cursor: pointer;
 
 }
 

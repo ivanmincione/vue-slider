@@ -9,7 +9,9 @@ var app = new Vue (
             "https://us.123rf.com/450wm/maykal/maykal1902/maykal190200069/116883671-color-splashes-of-ink-isolated-on-black-background-abstract-paint-in-water.jpg?ver=6",
             "https://www.phaidon.com/resource/kandinsky-circles.jpg",
             "https://365psd.com/images/previews/f8b/abstract-music-design-background-vector-illustration-3357.jpg",
-            ]
+        ],
+
+            timer: 0,
         },
 
         methods: {
@@ -19,6 +21,7 @@ var app = new Vue (
                 this.indexImg ++ ;
                 if( this.indexImg > this.images.length - 1 ) {
                     this.indexImg = 0;
+                    // this.resetPlay();
                 }
             },
 
@@ -27,10 +30,22 @@ var app = new Vue (
                 this.indexImg --;
                 if( this.indexImg < 0) {
                     this.indexImg = this.images.length - 1;
+                    // this.resetPlay();
                 }
-            }
-        },
+            },
 
+            // click sui circles e cambio di immagine corrispondente
+            selectSlide: function(index) {
+                this.indexImg = index;
+            },
+
+            // ------------------------- TEST ---------------------
+
+
+
+
+//end methods
+        },
 
 
 

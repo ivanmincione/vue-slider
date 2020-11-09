@@ -22,13 +22,14 @@
                     <i @click="prevImg" class="fas fa-angle-double-left fa-2x"></i>
                 </div>
 
-                <div class="carousel">
+                <div class="carousel" >
+
                     <img :src="images[indexImg]" alt="Image Not Found">
                     <div class="circles">
                         <!-- scorro l'array delle immagini e quando l'indice dell'img è uguale a quello del circle aggiungo la classe active  -->
                         <i
                             class="far fa-circle"
-                            v-for="(img, index) in images"
+                            v-for="(img, index) in images" @click="selectSlide(index)"
                             :class= "index == indexImg ? 'active' : '' ">
                         </i>
 
