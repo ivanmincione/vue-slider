@@ -16,7 +16,7 @@ var app = new Vue (
 
             nextImg() {
                 // incremento fino a raggiungere l'indice massimo
-                this.indexImg += 1;
+                this.indexImg ++ ;
                 if( this.indexImg > this.images.length - 1 ) {
                     this.indexImg = 0;
                 }
@@ -24,7 +24,7 @@ var app = new Vue (
 
             prevImg() {
                 //decremento fino al raggiungimento dell'indice minimo
-                this.indexImg -= 1;
+                this.indexImg --;
                 if( this.indexImg < 0) {
                     this.indexImg = this.images.length - 1;
                 }
