@@ -21,7 +21,7 @@ var app = new Vue (
                 this.indexImg ++ ;
                 if( this.indexImg > this.images.length - 1 ) {
                     this.indexImg = 0;
-                    // this.resetPlay();
+                    this.resetPlay();
                 }
             },
 
@@ -30,26 +30,35 @@ var app = new Vue (
                 this.indexImg --;
                 if( this.indexImg < 0) {
                     this.indexImg = this.images.length - 1;
-                    // this.resetPlay();
+                    this.resetPlay();
                 }
             },
 
             // click sui circles e cambio di immagine corrispondente
             selectSlide: function(index) {
                 this.indexImg = index;
+                this.resetPlay();
             },
 
             // ------------------------- TEST ---------------------
 
+// l'autoplay si avvia solo dopo aver cliccato su un circle o dopo aver scorso tutte le immagini .... ??? ....
 
+            play() {
+                let element = this;
+                this.timer = setInterval(function() {
+                element.nextImg();
+                }, 2000);
+            },
+
+            resetPlay() {
+                clearInterval(this.timer);
+                this.play();
+            },
 
 
 //end methods
         },
-
-
-
-
 
 //end Vue
     }
