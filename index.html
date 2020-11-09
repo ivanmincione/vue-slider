@@ -18,15 +18,15 @@
             <div class="container">
 
                 <div class="prev">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i @click="prevImg" class="fas fa-angle-double-left fa-2x"></i>
                 </div>
 
                 <div class="carousel">
-                    <img :src="images[indexImg]" alt="Image">
+                    <img :src="images[indexImg]" alt="Image Not Found">
                 </div>
 
                 <div class="next">
-                    <i class="fas fa-angle-double-right"></i>
+                    <i @click="nextImg" class="fas fa-angle-double-right fa-2x"></i>
                 </div>
 
             </div>
