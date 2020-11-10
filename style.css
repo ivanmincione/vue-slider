@@ -4,6 +4,45 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
+
+body {
+  background: #fff;
+}
+
+.title {
+  font-size: 5.6rem;
+  font-family: 'Lobster', cursive;
+  margin-top: 50px;
+}
+
+.title:hover{
+    background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.wrapper {
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+  color: #eee;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  animation: animation 100s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -1000px;
+  }
+}
+
 #root{
     width: 100vw;
     height: 100vh;
@@ -27,6 +66,14 @@
     float: left;
 }
 
+.next i:hover{
+    font-size: 50px;
+}
+.prev i:hover{
+    font-size: 50px;
+}
+
+
 .prev i, .next i {
     cursor: pointer;
 }
@@ -42,7 +89,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 10%;
 
 }
 
@@ -62,5 +109,5 @@
 
 .circles i.active{
     font-weight: bold;
-    
+
 }

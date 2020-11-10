@@ -12,6 +12,8 @@ var app = new Vue (
         ],
 
             timer: 0,
+
+        //end data
         },
 
         methods: {
@@ -40,10 +42,8 @@ var app = new Vue (
                 this.resetPlay();
             },
 
-            // ------------------------- TEST ---------------------
 
-// l'autoplay si avvia solo dopo aver cliccato su un circle o su una freccia .... ??? ....
-
+            //autoplay
             play() {
                 let element = this;
                 this.timer = setInterval(function() {
@@ -60,9 +60,10 @@ var app = new Vue (
 
 //end methods
         },
-        created() {
-            this.play();
-        },
+            // funzione per avviare l'autoplay al caricamento della pagina ---- va aggiunta fuori ai methods ----
+            created() {
+                this.play();
+            },
 
 //end Vue
     }

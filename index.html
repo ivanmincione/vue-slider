@@ -13,38 +13,42 @@
     </head>
     <body>
 
-        <div id="root">
+        <div class="wrapper">
+            <h2 class="title">Carousel whit Vue</h2>
 
-            <div class="container">
+            <div id="root">
 
-                <div class="prev">
-                    <!-- onClick richiamo la funzione -->
-                    <i @click="prevImg" class="fas fa-angle-double-left fa-2x"></i>
-                </div>
+                <div class="container">
 
-                <div class="carousel" >
-
-                    <img :src="images[indexImg]" alt="Image Not Found">
-                    <div class="circles">
-                        <!-- scorro l'array delle immagini e quando l'indice dell'img è uguale a quello del circle aggiungo la classe active  -->
-                        <i
-                            class="far fa-circle"
-                            v-for="(img, index) in images" @click="selectSlide(index)"
-                            :class= "index == indexImg ? 'active' : '' ">
-                        </i>
-
+                    <div class="prev">
+                        <!-- onClick richiamo la funzione -->
+                        <i @click="prevImg" class="fas fa-angle-double-left fa-2x"></i>
                     </div>
-                </div>
 
-                <div class="next">
-                    <!-- onClick richiamo la funzione -->
-                    <i @click="nextImg" class="fas fa-angle-double-right fa-2x"></i>
+                    <div class="carousel" >
+
+                        <img :src="images[indexImg]" alt="Image Not Found">
+                        <div class="circles">
+                            <!-- scorro l'array delle immagini e quando l'indice dell'img è uguale a quello del circle aggiungo la classe active  -->
+                            <i
+                                class="far fa-circle"
+                                v-for="(img, index) in images" @click="selectSlide(index)"
+                                :class= "index == indexImg ? 'active' : '' ">
+                            </i>
+
+                        </div>
+                    </div>
+
+                    <div class="next">
+                        <!-- onClick richiamo la funzione -->
+                        <i @click="nextImg" class="fas fa-angle-double-right fa-2x"></i>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
-
         <!-- JAVASCRIPT -->
         <script src="main.js" charset="utf-8"></script>
     </body>
